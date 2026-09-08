@@ -1,6 +1,6 @@
 SHELL := sh
 
-TYPST_VERSION := 0.12.0
+TYPST_VERSION := 0.15.1
 ifeq ($(OS),Windows_NT)
 TYPST := ./toolchain/$(TYPST_VERSION)/typst.exe
 else
