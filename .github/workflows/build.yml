@@ -1,0 +1,43 @@
+name: Build CV PDFs
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install project Typst version
+        shell: bash
+        run: |
+          set -euo pipefail
+          version=$(awk '$1 == "TYPST_VERSION" && $2 == ":=" { print $3 }' Makefile)
+          test -n "$version"
+          archive="$RUNNER_TEMP/typst.tar.xz"
+          curl --fail --location --retry 3 \
+            "https://github.com/typst/typst/releases/download/v${version}/typst-x86_64-unknown-linux-musl.tar.xz" \
+            --output "$archive"
+          mkdir -p "toolchain/$version"
+          tar -xJf "$archive" --strip-components=1 -C "toolchain/$version"
+          "toolchain/$version/typst" --version
+
+      - name: Build PDFs
+        run: make
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v7
+        with:
+          name: cv-pdfs
+          path: |
+            out/CV.pdf
+            out/CV-Dense.pdf
+          if-no-files-found: error
+          retention-days: 30
