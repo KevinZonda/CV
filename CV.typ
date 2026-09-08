@@ -40,11 +40,11 @@
 #cventry(
   tl: "Suzhou OpenDoll Technology Co., Ltd. (KigLand)",
   tr: "Mar 2025 - Present",
-  bl: "CTO / ML Leader |  KigLand Machine Learning Group",
+  bl: "CTO / ML Leader |  KigLand Machine Learning Lab",
   br: "Remote/Jiangsu, China"
 )[
 - Collaborated with other cofounders, attended _MiraclePlus_ (formerly Y Combinator China) Spring 2025 accelerator programme. Raised *CNY 2,000,000* in seed-round funding.
-- Worked on ML related problem, developed KigLand owned model family _KigAFL_, language model _KigSLM_ and other models.
+- Worked on ML related problem, built the kigurumi head (incl. face, hair, eye pieces, etc.) generative model and system with *PyTorch*, *Diffusion*. Increase the modelling speed by *over 6x* and reduce the cost by *over 10x*.
 ]
 
 #cventry(
