@@ -1,10 +1,13 @@
 #import "fontawesome.typ": *
 
-#let chiline() = {
-  v(-5pt);
-  line(length: 100%, stroke: gray);
-  v(-5pt)
-}
+#let chiline(gap: 8pt) = block(
+  width: 100%,
+  height: 0pt,
+  above: gap,
+  below: gap,
+  sticky: true,
+  line(length: 100%, stroke: gray),
+)
 
 #let iconlink(
   uri, text: "", icon: "link") = {
@@ -66,7 +69,10 @@
     font: (
       "Linux Biolinum O"
     ),
-    block(chiline()) + it,
+    chiline() + block(above: 0pt, below: 4pt)[
+      #set text(top-edge: "bounds", bottom-edge: "bounds")
+      #it.body
+    ],
     weight: 1000,
   )
   set list(indent: 0pt)
