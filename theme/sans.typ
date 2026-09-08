@@ -7,8 +7,8 @@
 }
 
 #let iconlink(
-  uri, text: "", icon: link-icon) = {
-  link(uri)[#fa[#icon]#text]
+  uri, text: "", icon: "link") = {
+  link(uri)[#fa(icon)#text]
 }
 
 #let subentry(

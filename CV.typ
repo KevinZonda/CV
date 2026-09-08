@@ -4,10 +4,10 @@
 
 = Xiang "Kevin" Shi
 
-#fa[#location-dot] London, UK & Jiangsu, China |
-#fa[#envelope] #link("mailto:realkevinshi@gmail.com")[realkevinshi\@gmail.com] |
-#fa[#github] #link("https://github.com/kevinzonda")[\@KevinZonda] |
-#fa[#link-icon] #link("https://kevinzonda.com")[kevinzonda.com]
+#fa("location-dot") London, UK & Jiangsu, China |
+#fa("envelope") #link("mailto:realkevinshi@gmail.com")[realkevinshi\@gmail.com] |
+#fa("github") #link("https://github.com/kevinzonda")[\@KevinZonda] |
+#fa("link") #link("https://kevinzonda.com")[kevinzonda.com]
 
 
 == Education
@@ -85,14 +85,14 @@
 
 #cventry(
   tl: "Piccadilly"  + " " +
-  iconlink("https://github.com/KVRes/Piccadilly", icon: github),
+  iconlink("https://github.com/KVRes/Piccadilly", icon: "github"),
   tr: "Nov 2024 - Dev 2024"
 )[
   - Piccadilly KV Store (PKV) is an event-driven high-performance Key-Value database, using SwissTable for storage and gRPC for communication.
 ]
 
 #cventry(
-  tl: "FastGit" + " " + iconlink("https://github.com/fastgitorg", icon: github),
+  tl: "FastGit" + " " + iconlink("https://github.com/fastgitorg", icon: "github"),
   tr: "Mar 2020 - Feb 2023"
 )[
   - A public non-profit project to help China Mainland users access GitHub.
